@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
-    <h1> Drive A Pink Car</h1>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+            <p>Organize your tasks and stay productive!</p>
+        </header>
 
-<!-- Example single danger button -->
-<div class="btn-group">
-    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      Apply
-    </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Membership</a></li>
-      <li><a class="dropdown-item" href="#">About Page</a></li>
-      <li><a class="dropdown-item" href="#">Contact Us</a></li>
-      <li><a class="dropdown-item" href="#">Reviews & Comments</a></li>
-    </ul>
-  </div>
+        <section class="task-input">
+            <form id="taskForm">
+                <input type="text" id="taskInput" placeholder="Enter a task..." required minlength="3">
+                <button type="submit" id="addButton">Add Task</button>
+            </form>
+            <p id="errorMessage" class="error hidden">Task must be at least 3 characters!</p>
+        </section>
 
+        <section class="task-list">
+            <ul id="taskList">
+                <!-- Tasks will be added dynamically -->
+            </ul>
+        </section>
 
+        <footer>
+            <p>&copy; 2025 Task Manager. All rights reserved.</p>
+        </footer>
+    </div>
 
-
+    <script src="script.js"></script>
 </body>
 </html>
